@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="1200px"
+    android:backgroundTint="#A8DAD6"
+    tools:context=".sorteo">
+
+    <TextView
+        android:id="@+id/tv_sorteo_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/boleto_3455_agregado_correctamente"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sorteo_precio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes" />
+
+    <EditText
+        android:id="@+id/txBusca1"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="104dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes"
+        app:strokeColor="@android:color/holo_blue_light"
+        app:strokeWidth="3dp" />
+
+    <EditText
+        android:id="@+id/txBusca2"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="104dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/txBusca1"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes" />
+
+    <EditText
+        android:id="@+id/txBusca3"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="1"
+        app:layout_constraintStart_toEndOf="@+id/txBusca2"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes" />
+
+    <EditText
+        android:id="@+id/txBusca4"
+        android:layout_width="60dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="1"
+        app:layout_constraintStart_toEndOf="@+id/txBusca3"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImagenes"
+        android:layout_width="400dp"
+        android:layout_height="253dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#2196F3"
+        android:text="Buscar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txBusca2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="264dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/numeros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvNumeros" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/total"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvElegidos"
+        tools:ignore="NotSibling" />
+
+    <Button
+        android:id="@+id/tv_sorteo_total"
+        android:layout_width="115dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#009688"
+        android:text="0.0"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvElegidos" />
+
+    <Button
+        android:id="@+id/btComprar"
+        android:layout_width="336dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#03A9F4"
+        android:text="@string/comprar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sorteo_total"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btCancelar"
+        android:layout_width="341dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/cancelar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btComprar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNumeros"
+        android:layout_width="380dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBuscar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvElegidos"
+        android:layout_width="400dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/tv_sorteo_precio"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.0"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_sorteo_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/rvImagenes" />
+
+    <EditText
+        android:id="@+id/txSorteoId"
+        android:layout_width="66dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="704dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

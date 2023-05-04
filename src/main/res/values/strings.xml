@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sorteos</string>
+    <string name="boleto_3455_agregado_correctamente">Boleto 3455 Agregado correctamente</string>
+    <string name="total">Total:</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="comprar">Comprar</string>
+    <string name="numeros">#          Numeros Seleccionados</string>
+    <string name="_3_0">$ 3.0</string>
+</resources>
